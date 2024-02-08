@@ -1,92 +1,5 @@
-import styled from "styled-components";
-
-const Vector = styled.img`
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  width: 100%;
-  height: 100%;
-`;
-const Depth8Frame = styled.div`position: absolute;
-  top: 34.59rem;
-  left: -25.44rem;
-  width: 1.38rem;
-  height: 1rem;
-  left: ${(p) => p.propLeft}
-  height: ${(p) => p.propHeight}
-`;
-const Depth7Frame = styled.div`
-  width: 1.5rem;
-  height: 1.5rem;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-`;
-const Depth6Frame = styled.div`
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-`;
-const TrackInventory = styled.b`
-  position: relative;
-  line-height: 1.25rem;
-`;
-const Depth7Frame1 = styled.div`
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  height: ${(p) => p.propHeight2};
-`;
-const EasilyTrackYour = styled.div`
-  align-self: stretch;
-  position: relative;
-  line-height: 1.31rem;
-`;
-const Depth7Frame2 = styled.div`
-  align-self: stretch;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  font-size: var(--font-size-sm);
-  color: var(--color-darkslategray);
-`;
-const Depth6Frame1 = styled.div`
-  align-self: stretch;
-  height: 9.38rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-9xs);
-  height: ${(p) => p.propHeight1};
-`;
-const Depth5FrameRoot = styled.div`
-  align-self: stretch;
-  width: 13.94rem;
-  border-radius: var(--br-5xs);
-  background-color: var(--color-white);
-  border: 1px solid var(--color-lightgray);
-  box-sizing: border-box;
-  flex-shrink: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-base) var(--padding-lg) var(--padding-base)
-    var(--padding-base);
-  gap: var(--gap-xs);
-  text-align: left;
-  font-size: var(--font-size-base);
-  color: var(--color-gray-200);
-  font-family: var(--font-inter);
-  align-self: ${(p) => p.propAlignSelf};
-`;
+import { useMemo } from "react";
+import "./Depth5Frame.css";
 
 const Depth5Frame = ({
   vector0,
@@ -98,27 +11,52 @@ const Depth5Frame = ({
   propHeight1,
   propHeight2,
 }) => {
+  const depth5Frame1Style = useMemo(() => {
+    return {
+      alignSelf: propAlignSelf,
+    };
+  }, [propAlignSelf]);
+
+  const depth8Frame0Style = useMemo(() => {
+    return {
+      left: propLeft,
+      height: propHeight,
+    };
+  }, [propLeft, propHeight]);
+
+  const depth6Frame1Style = useMemo(() => {
+    return {
+      height: propHeight1,
+    };
+  }, [propHeight1]);
+
+  const depth7Frame0Style = useMemo(() => {
+    return {
+      height: propHeight2,
+    };
+  }, [propHeight2]);
+
   return (
-    <Depth5FrameRoot propAlignSelf={propAlignSelf}>
-      <Depth6Frame>
-        <Depth7Frame>
-          <Vector loading="eager" alt="" src={vector0} />
-          <Depth8Frame propLeft={propLeft} propHeight={propHeight} />
-        </Depth7Frame>
-      </Depth6Frame>
-      <Depth6Frame1 propHeight1={propHeight1}>
-        <Depth7Frame1 propHeight2={propHeight2}>
-          <Depth6Frame>
-            <TrackInventory>{trackInventory}</TrackInventory>
-          </Depth6Frame>
-        </Depth7Frame1>
-        <Depth7Frame2>
-          <Depth6Frame>
-            <EasilyTrackYour>{easilyTrackYourStockLevel}</EasilyTrackYour>
-          </Depth6Frame>
-        </Depth7Frame2>
-      </Depth6Frame1>
-    </Depth5FrameRoot>
+    <div className="depth-5-frame-12" style={depth5Frame1Style}>
+      <div className="depth-6-frame-011">
+        <div className="depth-7-frame-07">
+          <img className="vector-01" loading="eager" alt="" src={vector0} />
+          <div className="depth-8-frame-08" style={depth8Frame0Style} />
+        </div>
+      </div>
+      <div className="depth-6-frame-12" style={depth6Frame1Style}>
+        <div className="depth-7-frame-08" style={depth7Frame0Style}>
+          <div className="depth-8-frame-09">
+            <b className="track-inventory">{trackInventory}</b>
+          </div>
+        </div>
+        <div className="depth-7-frame-14">
+          <div className="depth-8-frame-010">
+            <div className="easily-track-your">{easilyTrackYourStockLevel}</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

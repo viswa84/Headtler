@@ -1,185 +1,68 @@
-import styled from "styled-components";
-
-const HelpCenter = styled.div`
-  position: relative;
-  line-height: 1.5rem;
-`;
-const CommunityDevelopers = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0rem var(--padding-9xs) 0rem 0rem;
-`;
-const CommunityDevelopers1 = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0rem var(--padding-xs) 0rem 0rem;
-`;
-const HelpCenterFrame = styled.div`
-  align-self: stretch;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 0rem var(--padding-9xs) 0rem 0rem;
-  gap: var(--gap-xl);
-  @media screen and (max-width: 750px) {
-    flex-wrap: wrap;
-  }
-`;
-const HeadtlerFrame = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0rem var(--padding-5xs) 0rem 0rem;
-`;
-const VectorVectorFrames = styled.img`
-  position: absolute;
-  top: 0rem;
-  left: 0rem;
-  width: 100%;
-  height: 100%;
-`;
-const Depth8Frame = styled.div`
-  position: absolute;
-  top: -48.75rem;
-  left: -34.25rem;
-  width: 1.19rem;
-  height: 1.25rem;
-  display: none;
-`;
-const Depth7Frame = styled.div`
-  height: 1.5rem;
-  width: 1.5rem;
-  position: relative;
-  overflow: hidden;
-  flex-shrink: 0;
-`;
-const Depth8Frame1 = styled.div`
-  position: absolute;
-  top: -48.75rem;
-  left: -36.75rem;
-  width: 1.25rem;
-  height: 1.13rem;
-  display: none;
-`;
-const Depth8Frame2 = styled.div`
-  position: absolute;
-  top: -48.75rem;
-  left: -39.25rem;
-  width: 1.19rem;
-  height: 1.25rem;
-  display: none;
-`;
-const Depth8Frame3 = styled.div`
-  position: absolute;
-  top: -48.75rem;
-  left: -41.75rem;
-  width: 1.31rem;
-  height: 1.06rem;
-  display: none;
-`;
-const DepthFrameVector = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: var(--gap-base);
-`;
-const VectorFrames = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0rem var(--padding-6xs) 0rem 0rem;
-`;
-const TermsOfService = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--gap-5xl);
-  max-width: 100%;
-`;
-const PowerfulToolsRoot = styled.footer`
-  width: 53.88rem;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0rem var(--padding-12xs) 0rem var(--padding-6xs);
-  box-sizing: border-box;
-  max-width: 100%;
-  text-align: center;
-  font-size: var(--font-size-base);
-  color: var(--color-darkslategray);
-  font-family: var(--font-inter);
-`;
+import "./PowerfulTools.css";
 
 const PowerfulTools = () => {
   return (
-    <PowerfulToolsRoot>
-      <TermsOfService>
-        <HelpCenterFrame>
-          <HelpCenter>Help Center</HelpCenter>
-          <CommunityDevelopers>
-            <HelpCenter>Community</HelpCenter>
-          </CommunityDevelopers>
-          <CommunityDevelopers1>
-            <HelpCenter>Developers</HelpCenter>
-          </CommunityDevelopers1>
-          <HelpCenter>Company</HelpCenter>
-          <HelpCenter>Privacy Policy</HelpCenter>
-        </HelpCenterFrame>
-        <HeadtlerFrame>
-          <HelpCenter>Terms of Service</HelpCenter>
-        </HeadtlerFrame>
-        <VectorFrames>
-          <DepthFrameVector>
-            <Depth7Frame>
-              <VectorVectorFrames
+    <footer className="powerful-tools">
+      <div className="terms-of-service">
+        <div className="help-center-frame">
+          <div className="help-center">Help Center</div>
+          <div className="community-developers">
+            <div className="community">Community</div>
+          </div>
+          <div className="community-developers1">
+            <div className="developers">Developers</div>
+          </div>
+          <div className="company">Company</div>
+          <div className="privacy-policy">Privacy Policy</div>
+        </div>
+        <div className="headtler-frame">
+          <div className="terms-of-service1">Terms of Service</div>
+        </div>
+        <div className="vector-frames">
+          <div className="depth-frame-vector">
+            <div className="depth-7-frame-013">
+              <img
+                className="vector-vector-frames"
                 loading="eager"
                 alt=""
                 src="/vector--0-5.svg"
               />
-              <Depth8Frame />
-            </Depth7Frame>
-            <Depth7Frame>
-              <VectorVectorFrames
+              <div className="depth-8-frame-014" />
+            </div>
+            <div className="depth-7-frame-014">
+              <img
+                className="vector-02"
                 loading="eager"
                 alt=""
                 src="/vector--0-6.svg"
               />
-              <Depth8Frame1 />
-            </Depth7Frame>
-            <Depth7Frame>
-              <VectorVectorFrames
+              <div className="depth-8-frame-015" />
+            </div>
+            <div className="depth-7-frame-015">
+              <img
+                className="vector-03"
                 loading="eager"
                 alt=""
                 src="/vector--0-7.svg"
               />
-              <Depth8Frame2 />
-            </Depth7Frame>
-            <Depth7Frame>
-              <VectorVectorFrames
+              <div className="depth-8-frame-016" />
+            </div>
+            <div className="depth-7-frame-016">
+              <img
+                className="vector-04"
                 loading="eager"
                 alt=""
                 src="/vector--0-8.svg"
               />
-              <Depth8Frame3 />
-            </Depth7Frame>
-          </DepthFrameVector>
-        </VectorFrames>
-        <HeadtlerFrame>
-          <HelpCenter>@2022 Headtler</HelpCenter>
-        </HeadtlerFrame>
-      </TermsOfService>
-    </PowerfulToolsRoot>
+              <div className="depth-8-frame-017" />
+            </div>
+          </div>
+        </div>
+        <div className="headtler-frame1">
+          <div className="headtler1">@2022 Headtler</div>
+        </div>
+      </div>
+    </footer>
   );
 };
 
